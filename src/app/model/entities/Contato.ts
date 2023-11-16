@@ -1,13 +1,20 @@
-export default class Contato{
+export default class Contato {
   private _id: string;
   private _nome: string;
   private _telefone: number;
+  private _downloadURL: any;
 
-  constructor(nome: string, telefone: number){
+  constructor(nome: string, telefone: number) {
     this._nome = nome;
     this._telefone = telefone;
   }
 
+  public get downloadURL() {
+    return this._downloadURL;
+  }
+  public set downloadURL(value) {
+    this._downloadURL = value;
+  }
   public get id(): string {
     return this._id;
   }
